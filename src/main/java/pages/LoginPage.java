@@ -11,6 +11,8 @@ public class LoginPage extends CommonPage {
     private By byLblLoginMsg = By.id("swal2-title");;
     private By byLblLoginfailedMsg = By.xpath("//p[@id='matKhau-helper-text']");
     private By byLblLoginfailedAccount = By.xpath("//p[@id='taiKhoan-helper-text']");
+    private By byLblLoginPasswordErrorMsg = By.xpath("//div[contains(@class,'MuiAlert-message') and contains(text(),'Tài khoản hoặc mật khẩu không đúng!')]");
+
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -41,9 +43,14 @@ public class LoginPage extends CommonPage {
         return getText(byLblLoginfailedMsg);
     }
 
-    public String getAccountFailed() {
+    public String getMessagefailedAccount() {
         LOG.info("getAccount1");
         return getText(byLblLoginfailedAccount);
+    }
+
+    public String getMessageErrorPassword() {
+        LOG.info("getMessage2");
+        return getText(byLblLoginPasswordErrorMsg);
     }
 
     public void login(String account, String password) {
