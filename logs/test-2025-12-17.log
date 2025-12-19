@@ -1,0 +1,117 @@
+[2025-12-17 20:47:55] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-17 20:47:56] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-17 20:47:56] [INFO ] TC02_LoginTest - Before class executed
+[2025-12-17 20:47:59] [INFO ] TC02_LoginTest - Before Method executed
+[2025-12-17 20:47:59] [INFO ] TestListener - ===== START TEST: testLoginfailedAccount =====
+[2025-12-17 20:48:00] [INFO ] TopBarNavigation - click: By.xpath: //h3[text()='Đăng Nhập']
+[2025-12-17 20:48:00] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //h3[text()='Đăng Nhập']
+[2025-12-17 20:48:00] [INFO ] LoginPage - enterPassword: Test123456@
+[2025-12-17 20:48:00] [INFO ] LoginPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-17 20:48:00] [INFO ] LoginPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-17 20:48:00] [INFO ] LoginPage - clickLogin
+[2025-12-17 20:48:00] [INFO ] LoginPage - click: By.xpath: //button[.='Đăng nhập']
+[2025-12-17 20:48:00] [INFO ] LoginPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng nhập']
+[2025-12-17 20:48:01] [INFO ] LoginPage - getMessage
+[2025-12-17 20:48:01] [INFO ] LoginPage - getText: By.id: swal2-title
+[2025-12-17 20:48:01] [INFO ] LoginPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-17 20:48:31] [ERROR] TestListener - ===== FAILED TEST: testLoginfailedAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.146 (c1224fc40c9..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50881}, goog:processID: 19556, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50881/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f000d9246ef8fda52414277a31435c92
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:48)
+	at pages.LoginPage.getMessage(LoginPage.java:36)
+	at testcases.login.TC02_LoginTest.testLoginfailedAccount(TC02_LoginTest.java:97)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-17 20:48:31] [INFO ] TC02_LoginTest - After Method executed
+[2025-12-17 20:48:31] [INFO ] TC02_LoginTest - After class executed
+[2025-12-17 20:48:32] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-17 20:48:32] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-17 21:01:08] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-17 21:01:08] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-17 21:01:08] [INFO ] TC02_LoginTest - Before class executed
+[2025-12-17 21:01:09] [INFO ] TC02_LoginTest - Before Method executed
+[2025-12-17 21:01:09] [INFO ] TestListener - ===== START TEST: testLoginfailedAccount =====
+[2025-12-17 21:01:41] [INFO ] TopBarNavigation - click: By.xpath: //h3[text()='Đăng Nhập']
+[2025-12-17 21:01:41] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //h3[text()='Đăng Nhập']
+[2025-12-17 21:01:42] [INFO ] LoginPage - enterPassword: Test123456@
+[2025-12-17 21:01:42] [INFO ] LoginPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-17 21:01:42] [INFO ] LoginPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-17 21:01:42] [INFO ] LoginPage - clickLogin
+[2025-12-17 21:01:42] [INFO ] LoginPage - click: By.xpath: //button[.='Đăng nhập']
+[2025-12-17 21:01:42] [INFO ] LoginPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng nhập']
+[2025-12-17 21:01:42] [INFO ] LoginPage - getAccount1
+[2025-12-17 21:01:42] [INFO ] LoginPage - getText: By.xpath: //p[@id='taiKhoan-helper-text']
+[2025-12-17 21:01:42] [INFO ] LoginPage - waitForVisibilityOfElementLocated: By.xpath: //p[@id='taiKhoan-helper-text']
+[2025-12-17 21:01:42] [INFO ] TestListener - ===== PASSED TEST: testLoginfailedAccount =====
+[2025-12-17 21:01:42] [INFO ] TC02_LoginTest - After Method executed
+[2025-12-17 21:01:42] [INFO ] TC02_LoginTest - After class executed
+[2025-12-17 21:01:42] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-17 21:01:42] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-17 21:12:01] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-17 21:12:01] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-17 21:12:01] [INFO ] TC02_LoginTest - Before class executed
+[2025-12-17 21:12:02] [INFO ] TC02_LoginTest - Before Method executed
+[2025-12-17 21:12:02] [INFO ] TestListener - ===== START TEST: testValidLogin =====
+[2025-12-17 21:12:03] [INFO ] TopBarNavigation - click: By.xpath: //h3[text()='Đăng Nhập']
+[2025-12-17 21:12:03] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //h3[text()='Đăng Nhập']
+[2025-12-17 21:12:03] [INFO ] LoginPage - enterAccount: Testaefad88de3ff4ca2b9d3679f1199415c
+[2025-12-17 21:12:03] [INFO ] LoginPage - sendKeys: By.id: taiKhoan with Testaefad88de3ff4ca2b9d3679f1199415c
+[2025-12-17 21:12:03] [INFO ] LoginPage - waitForVisibilityOfElementLocated: By.id: taiKhoan
+[2025-12-17 21:12:03] [INFO ] LoginPage - enterPassword: Test123456@
+[2025-12-17 21:12:03] [INFO ] LoginPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-17 21:12:03] [INFO ] LoginPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-17 21:12:03] [INFO ] LoginPage - clickLogin
+[2025-12-17 21:12:03] [INFO ] LoginPage - click: By.xpath: //button[.='Đăng nhập']
+[2025-12-17 21:12:03] [INFO ] LoginPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng nhập']
+[2025-12-17 21:12:03] [INFO ] LoginPage - getMessage
+[2025-12-17 21:12:03] [INFO ] LoginPage - getText: By.id: swal2-title
+[2025-12-17 21:12:03] [INFO ] LoginPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-17 21:12:03] [INFO ] HomePage - getText: By.xpath: //a[@href='/account']/h3
+[2025-12-17 21:12:03] [INFO ] HomePage - waitForVisibilityOfElementLocated: By.xpath: //a[@href='/account']/h3
+[2025-12-17 21:12:04] [INFO ] TestListener - ===== PASSED TEST: testValidLogin =====
+[2025-12-17 21:12:04] [INFO ] TC02_LoginTest - After Method executed
+[2025-12-17 21:12:04] [INFO ] TC02_LoginTest - After class executed
+[2025-12-17 21:12:04] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-17 21:12:04] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-17 21:13:00] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-17 21:13:00] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-17 21:13:00] [INFO ] TC02_LoginTest - Before class executed
+[2025-12-17 21:13:01] [INFO ] TC02_LoginTest - Before Method executed
+[2025-12-17 21:13:01] [INFO ] TestListener - ===== START TEST: testinvalidLogin =====
+[2025-12-17 21:13:02] [INFO ] TopBarNavigation - click: By.xpath: //h3[text()='Đăng Nhập']
+[2025-12-17 21:13:02] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //h3[text()='Đăng Nhập']
+[2025-12-17 21:13:02] [INFO ] LoginPage - enterAccount: Testaefad88de3ff4ca2b9d3679f1199415c
+[2025-12-17 21:13:02] [INFO ] LoginPage - sendKeys: By.id: taiKhoan with Testaefad88de3ff4ca2b9d3679f1199415c
+[2025-12-17 21:13:02] [INFO ] LoginPage - waitForVisibilityOfElementLocated: By.id: taiKhoan
+[2025-12-17 21:13:02] [INFO ] LoginPage - clickLogin
+[2025-12-17 21:13:02] [INFO ] LoginPage - click: By.xpath: //button[.='Đăng nhập']
+[2025-12-17 21:13:02] [INFO ] LoginPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng nhập']
+[2025-12-17 21:13:02] [INFO ] LoginPage - getMessage1
+[2025-12-17 21:13:02] [INFO ] LoginPage - getText: By.xpath: //p[@id='matKhau-helper-text']
+[2025-12-17 21:13:02] [INFO ] LoginPage - waitForVisibilityOfElementLocated: By.xpath: //p[@id='matKhau-helper-text']
+[2025-12-17 21:13:02] [INFO ] TestListener - ===== PASSED TEST: testinvalidLogin =====
+[2025-12-17 21:13:02] [INFO ] TC02_LoginTest - After Method executed
+[2025-12-17 21:13:02] [INFO ] TC02_LoginTest - After class executed
+[2025-12-17 21:13:02] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-17 21:13:02] [INFO ] TC01_RegisterTest - Test Suite completed
