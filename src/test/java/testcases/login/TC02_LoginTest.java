@@ -97,6 +97,7 @@ public class TC02_LoginTest extends BaseTest {
         String actualLoginfailedMsg = loginPage.getMessagefailedAccount();
         Assert.assertEquals(actualLoginfailedMsg, "Đây là trường bắt buộc !", "Login failed");
     }
+
     @Test
     public void testLoginWithInvalidAccount() {
         loginPage = new LoginPage(driver);
