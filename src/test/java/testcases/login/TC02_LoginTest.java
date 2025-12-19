@@ -93,8 +93,23 @@ public class TC02_LoginTest extends BaseTest {
         loginPage.clickLogin();
 
         //Step 5: Verify login failed
-        //VP1: "Đăng nhập thành công" message displays
-        String actualLoginMsg = loginPage.getMessage();
-        Assert.assertEquals(actualLoginMsg, "Đây là trường bắt buộc !", "Login failed");
+        //VP1: "Đây là trường bắt buộc" message displays
+        String actualLoginfailedMsg = loginPage.getMessagefailedAccount();
+        Assert.assertEquals(actualLoginfailedMsg, "Đây là trường bắt buộc !", "Login failed");
+    }
+    @Test
+    public void testLoginWithInvalidAccount() {
+        loginPage = new LoginPage(driver);
+        homePage = new HomePage(driver);
+
+        driver.get("https://demo1.cybersoft.edu.vn");
+        homePage.navigateLoginPage();
+
+        loginPage.enterAccount("invalid_account_123");
+        loginPage.enterPassword("Test123456@");
+        loginPage.clickLogin();
+
+        String actualLoginPasswordErrorMsg = loginPage.getMessageErrorPassword();
+        Assert.assertEquals(actualLoginPasswordErrorMsg, "Tài khoản hoặc mật khẩu không đúng!", "Invalid account message");
     }
 }
