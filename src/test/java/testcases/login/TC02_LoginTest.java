@@ -99,7 +99,7 @@ public class TC02_LoginTest extends BaseTest {
     }
 
     @Test
-    public void testLoginWithInvalidAccount() {
+    public void testLoginWithWrongAccount() {
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
 
@@ -110,6 +110,23 @@ public class TC02_LoginTest extends BaseTest {
         loginPage.enterPassword("Test123456@");
         loginPage.clickLogin();
 
+        String actualLoginPasswordErrorMsg = loginPage.getMessageErrorPassword();
+        Assert.assertEquals(actualLoginPasswordErrorMsg, "Tài khoản hoặc mật khẩu không đúng!", "Invalid account message");
+    }
+
+    @Test
+    public void testLoginWithWrongPassword() {
+        loginPage = new LoginPage(driver);
+        homePage = new HomePage(driver);
+        // Arrange
+        driver.get("https://demo1.cybersoft.edu.vn/sign-in");
+        homePage.navigateLoginPage();
+
+        loginPage.enterAccount("Testaefad88de3ff4ca2b9d3679f1199415c");   // account đúng
+        loginPage.enterPassword("123456789");                             // password sai
+        loginPage.clickLogin();
+
+        // Act
         String actualLoginPasswordErrorMsg = loginPage.getMessageErrorPassword();
         Assert.assertEquals(actualLoginPasswordErrorMsg, "Tài khoản hoặc mật khẩu không đúng!", "Invalid account message");
     }
