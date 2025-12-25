@@ -104,6 +104,77 @@ public class TC01_RegisterTest extends BaseTest {
         //VP2: User profile name displays
         String actualDisplayName = homePage.getUserProfileName();
         Assert.assertEquals(actualDisplayName, "John Kenny", "User Profile name");
+    }
 
+    @Test(priority = 1)
+    public void testRegisterDuplicateAccount() {
+        registerPage = new RegisterPage(driver);
+        loginPage = new LoginPage(driver);
+        homePage = new HomePage(driver);
+
+        LOG.info(driver + " - testRegisterDuplicateAccount running...");
+
+        //Step 1: Go to https://demo1.cybersoft.edu.vn
+        ExtentReportManager.info("Go to https://demo1.cybersoft.edu.vn");
+        LOG.info("Go to https://demo1.cybersoft.edu.vn");
+        driver.get("https://demo1.cybersoft.edu.vn");
+        homePage.navigateRegisterPage();
+
+        //Step 2: Create new account and register successfully (Pre-condition)
+        ExtentReportManager.info("Create new account and register successfully (Pre-condition)");
+        LOG.info("Create new account and register successfully (Pre-condition)");
+
+        String account = "Test" + UUID.randomUUID();
+        String newAcount = account.replace("-", "");
+        LOG.info(newAcount);
+
+        registerPage.enterAccount(newAcount);
+        registerPage.enterPassword("Test123456@");
+        registerPage.enterConfirmPassword("Test123456@");
+        registerPage.enterName("John Kenny");
+        String email1 = newAcount + "@example.com";
+        registerPage.enterEmail(email1);
+
+        //Step 3: Click 'Dang Ky' button
+        ExtentReportManager.info("Click 'Dang Ky' button");
+        LOG.info("Click 'Dang Ky' button");
+        registerPage.clickRegister();
+
+        //Step 4: Verify register successfully
+        ExtentReportManager.info("Verify register successfully");
+        ExtentReportManager.info("\"Đăng ký thành công\" message displays");
+        LOG.info("Verify register successfully");
+        String msg1 = registerPage.getMessage();
+        Assert.assertEquals(msg1, "Đăng ký thành công", "Register message (1st)");
+
+        //Step 5: Go to homepage and navigate Register again
+        ExtentReportManager.info("Go to homepage and navigate Register again");
+        LOG.info("Go to homepage and navigate Register again");
+        driver.get("https://demo1.cybersoft.edu.vn");
+        homePage.navigateRegisterPage();
+
+        //Step 6: Register AGAIN with SAME account but different email
+        ExtentReportManager.info("Register AGAIN with SAME account but different email");
+        LOG.info("Register AGAIN with SAME account but different email");
+
+        registerPage.enterAccount(newAcount);
+        registerPage.enterPassword("Test123456@");
+        registerPage.enterConfirmPassword("Test123456@");
+        registerPage.enterName("John Kenny");
+        String email2 = newAcount + "1@example.com";
+        registerPage.enterEmail(email2);
+
+        //Step 7: Click 'Dang Ky' button
+        ExtentReportManager.info("Click 'Dang Ky' button");
+        LOG.info("Click 'Dang Ky' button");
+        registerPage.clickRegister();
+
+        //Step 8: Verify register FAILED (Duplicate account)
+        ExtentReportManager.info("Verify register FAILED (Duplicate account)");
+        ExtentReportManager.info("VP2: Message should be \"Tài khoản đã tồn tại!\"");
+        LOG.info("Verify register FAILED (Duplicate account)");
+
+        String msg2 = registerPage.getMessage();
+        Assert.assertNotEquals(msg2, "Tài khoản đã tồn tại!", "Register should fail when duplicate account");
     }
 }

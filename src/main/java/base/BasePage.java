@@ -35,6 +35,7 @@ public class BasePage {
         LOG.info("sendKeys: " + locator + " with " + value);
         WebElement element = waitForVisibilityOfElementLocated(locator);
         element.sendKeys(value);
+        element.clear();
     }
 
     public void click(By locator) {
