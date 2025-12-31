@@ -21,7 +21,7 @@ public class LoginPage extends CommonPage {
     }
 
     public void navigateToLoginPage() {
-        driver.get(BASE_URL + "/login");
+        driver.get(BASE_URL + "/signin");
     }
 
     public void enterAccount(String account) {

@@ -13,8 +13,8 @@ public class TC04_BookMovieTicketsTest extends BaseTest {
     private static final String PURCHASE_ID = "42102";
 
     // TODO: thay bằng account test thật
-    private static final String EMAIL = "your_email@example.com";
-    private static final String PASSWORD = "your_password";
+    private static final String USERNAME = "vananh.test";
+    private static final String PASSWORD = "123456";
 
     private LoginPage loginPage;
     private PurchasePage purchasePage;
@@ -35,7 +35,10 @@ public class TC04_BookMovieTicketsTest extends BaseTest {
     @Test
     public void testPurchaseWithLoginSelectSeatShouldShowSuccess() {
         loginPage.navigateToLoginPage();
-        loginPage.login(EMAIL, PASSWORD);
+        loginPage.login(USERNAME, PASSWORD);
+
+        String actualLoginMsg = loginPage.getMessage();
+        Assert.assertEquals(actualLoginMsg, "Đăng nhập thành công", "Login message");
 
         purchasePage.navigateToPurchasePage(PURCHASE_ID);
         purchasePage.selectFirstAvailableSeat();
@@ -56,7 +59,10 @@ public class TC04_BookMovieTicketsTest extends BaseTest {
     @Test
     public void testPurchaseWithLoginNoSeatShouldShowError() {
         loginPage.navigateToLoginPage();
-        loginPage.login(EMAIL, PASSWORD);
+        loginPage.login(USERNAME, PASSWORD);
+
+        String actualLoginMsg = loginPage.getMessage();
+        Assert.assertEquals(actualLoginMsg, "Đăng nhập thành công", "Login message");
 
         purchasePage.navigateToPurchasePage(PURCHASE_ID);
         purchasePage.clickBuyTicket();

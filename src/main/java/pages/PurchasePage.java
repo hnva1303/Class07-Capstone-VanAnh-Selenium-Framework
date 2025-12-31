@@ -14,10 +14,10 @@ public class PurchasePage extends BasePage {
 
     // Seat buttons (có thể bạn cần chỉnh theo DOM thực tế)
     // Mặc định: button.ghe là ghế, gheDaDat là đã đặt
-    private final By availableSeats = By.cssSelector("button.ghe:not(.gheDaDat):not([disabled])");
+    private final By availableSeats = By.xpath("//button[not(@disabled)][not(.='ĐẶT VÉ')]");
 
     // Nút mua vé/đặt vé
-    private final By btnBuyTicket = By.xpath("//button[contains(.,'MUA VÉ') or contains(.,'ĐẶT VÉ') or contains(.,'Mua vé') or contains(.,'Đặt vé')]");
+    private final By btnBuyTicket = By.xpath("//button[.='ĐẶT VÉ']");
 
     // SweetAlert2
     private final By alertTitle = By.cssSelector("h2#swal2-title, .swal2-title");
