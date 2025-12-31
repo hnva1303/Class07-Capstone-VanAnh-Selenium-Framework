@@ -1,0 +1,498 @@
+[2025-12-25 02:55:43] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-25 02:55:43] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-25 02:55:43] [INFO ] TC01_RegisterTest - Before class executed
+[2025-12-25 02:55:45] [INFO ] TC01_RegisterTest - Before Method executed
+[2025-12-25 02:55:45] [INFO ] TestListener - ===== START TEST: testRegisterDuplicateAccount =====
+[2025-12-25 02:55:45] [INFO ] TC01_RegisterTest - ChromeDriver: chrome on windows (f4c099fa5652a4e608a34c6d1fb11fab) - testRegisterDuplicateAccount running...
+[2025-12-25 02:55:45] [INFO ] TC01_RegisterTest - Step 1: Go to https://demo1.cybersoft.edu.vn
+[2025-12-25 02:55:47] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-25 02:55:47] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-25 02:55:47] [INFO ] TC01_RegisterTest - Step 2: Create new account and register successfully (Pre-condition)
+[2025-12-25 02:55:47] [INFO ] TC01_RegisterTest - Test36ab26577ef04a809ac7fe56bbf45570
+[2025-12-25 02:55:47] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with Test36ab26577ef04a809ac7fe56bbf45570
+[2025-12-25 02:55:47] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-25 02:55:47] [INFO ] RegisterPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-25 02:55:47] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-25 02:55:47] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with Test123456@
+[2025-12-25 02:55:47] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-25 02:55:47] [INFO ] RegisterPage - sendKeys: By.id: hoTen with John Kenny
+[2025-12-25 02:55:47] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-25 02:55:47] [INFO ] RegisterPage - sendKeys: By.id: email with Test36ab26577ef04a809ac7fe56bbf45570@example.com
+[2025-12-25 02:55:47] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-25 02:55:48] [INFO ] TC01_RegisterTest - Step 3: Click 'Dang Ky' button
+[2025-12-25 02:55:48] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-25 02:55:48] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-25 02:55:48] [INFO ] TC01_RegisterTest - Step 4: Verify register successfully
+[2025-12-25 02:55:48] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-25 02:55:48] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-25 02:55:48] [INFO ] TC01_RegisterTest - Step 5: Go to homepage and navigate Register again
+[2025-12-25 02:55:48] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-25 02:55:48] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-25 02:55:48] [INFO ] TC01_RegisterTest - Step 6: Register AGAIN with SAME account but different email
+[2025-12-25 02:55:48] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with Test36ab26577ef04a809ac7fe56bbf45570
+[2025-12-25 02:55:48] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-25 02:55:48] [INFO ] RegisterPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-25 02:55:48] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-25 02:55:49] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with Test123456@
+[2025-12-25 02:55:49] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-25 02:55:49] [INFO ] RegisterPage - sendKeys: By.id: hoTen with John Kenny
+[2025-12-25 02:55:49] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-25 02:55:49] [INFO ] RegisterPage - sendKeys: By.id: email with Test36ab26577ef04a809ac7fe56bbf455701@example.com
+[2025-12-25 02:55:49] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-25 02:55:49] [INFO ] TC01_RegisterTest - Step 7: Click 'Dang Ky' button
+[2025-12-25 02:55:49] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-25 02:55:49] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-25 02:55:49] [INFO ] TC01_RegisterTest - Step 8: Verify register FAILED (Duplicate account)
+[2025-12-25 02:55:49] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-25 02:55:49] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-25 02:56:19] [ERROR] TestListener - ===== FAILED TEST: testRegisterDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56190}, goog:processID: 23060, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56190/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f4c099fa5652a4e608a34c6d1fb11fab
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:48)
+	at pages.RegisterPage.getMessage(RegisterPage.java:45)
+	at testcases.register.TC01_RegisterTest.testRegisterDuplicateAccount(TC01_RegisterTest.java:177)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-25 02:56:19] [INFO ] TC01_RegisterTest - After Method executed
+[2025-12-25 02:56:20] [INFO ] TC01_RegisterTest - After class executed
+[2025-12-25 02:56:20] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-25 02:56:20] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-25 03:12:14] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-25 03:12:14] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-25 03:12:15] [INFO ] TC01_RegisterTest - Before class executed
+[2025-12-25 03:12:16] [INFO ] TC01_RegisterTest - Before Method executed
+[2025-12-25 03:12:16] [INFO ] TestListener - ===== START TEST: testRegisterDuplicateAccount =====
+[2025-12-25 03:12:16] [INFO ] TC01_RegisterTest - ChromeDriver: chrome on windows (f7b1ac4a481a0beab33d5f59b9c868a6) - testRegisterDuplicateAccount running...
+[2025-12-25 03:12:16] [INFO ] TC01_RegisterTest - Step 1: Go to https://demo1.cybersoft.edu.vn
+[2025-12-25 03:12:17] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-25 03:12:17] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-25 03:12:17] [INFO ] TC01_RegisterTest - Step 2: Create new account and register successfully (Pre-condition)
+[2025-12-25 03:12:17] [INFO ] TC01_RegisterTest - Test5571a48e51b1474e82ea5ee08baa4275
+[2025-12-25 03:12:17] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with Test5571a48e51b1474e82ea5ee08baa4275
+[2025-12-25 03:12:17] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-25 03:12:17] [INFO ] RegisterPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-25 03:12:17] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-25 03:12:17] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with Test123456@
+[2025-12-25 03:12:17] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-25 03:12:17] [INFO ] RegisterPage - sendKeys: By.id: hoTen with John Kenny
+[2025-12-25 03:12:17] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-25 03:12:17] [INFO ] RegisterPage - sendKeys: By.id: email with Test5571a48e51b1474e82ea5ee08baa4275@example.com
+[2025-12-25 03:12:17] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-25 03:12:17] [INFO ] TC01_RegisterTest - Step 3: Click 'Dang Ky' button
+[2025-12-25 03:12:17] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-25 03:12:17] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-25 03:12:17] [INFO ] TC01_RegisterTest - Step 4: Verify register successfully
+[2025-12-25 03:12:17] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-25 03:12:17] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-25 03:12:47] [ERROR] TestListener - ===== FAILED TEST: testRegisterDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60813}, goog:processID: 10384, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60813/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7b1ac4a481a0beab33d5f59b9c868a6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:49)
+	at pages.RegisterPage.getMessage(RegisterPage.java:46)
+	at testcases.register.TC01_RegisterTest.testRegisterDuplicateAccount(TC01_RegisterTest.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-25 03:12:47] [INFO ] TC01_RegisterTest - After Method executed
+[2025-12-25 03:12:48] [INFO ] TC01_RegisterTest - After class executed
+[2025-12-25 03:12:48] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-25 03:12:49] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-25 03:17:20] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-25 03:17:20] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-25 03:17:20] [INFO ] TC01_RegisterTest - Before class executed
+[2025-12-25 03:17:21] [INFO ] TC01_RegisterTest - Before Method executed
+[2025-12-25 03:17:21] [INFO ] TestListener - ===== START TEST: testRegisterDuplicateAccount =====
+[2025-12-25 03:17:21] [INFO ] TC01_RegisterTest - ChromeDriver: chrome on windows (86333a444d898c0aea202aac208ce116) - testRegisterDuplicateAccount running...
+[2025-12-25 03:17:21] [INFO ] TC01_RegisterTest - Step 1: Go to https://demo1.cybersoft.edu.vn
+[2025-12-25 03:17:22] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-25 03:17:22] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-25 03:17:22] [INFO ] TC01_RegisterTest - Step 2: Create new account and register successfully (Pre-condition)
+[2025-12-25 03:17:22] [INFO ] TC01_RegisterTest - Test7b8cec601be64ab5ba68a28f18943759
+[2025-12-25 03:17:22] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with Test7b8cec601be64ab5ba68a28f18943759
+[2025-12-25 03:17:22] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-25 03:17:22] [INFO ] RegisterPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-25 03:17:22] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-25 03:17:22] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with Test123456@
+[2025-12-25 03:17:22] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-25 03:17:22] [INFO ] RegisterPage - sendKeys: By.id: hoTen with John Kenny
+[2025-12-25 03:17:22] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-25 03:17:22] [INFO ] RegisterPage - sendKeys: By.id: email with Test7b8cec601be64ab5ba68a28f18943759@example.com
+[2025-12-25 03:17:22] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-25 03:17:22] [INFO ] TC01_RegisterTest - Step 3: Click 'Dang Ky' button
+[2025-12-25 03:17:22] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-25 03:17:22] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-25 03:17:22] [INFO ] TC01_RegisterTest - Step 4: Verify register successfully
+[2025-12-25 03:17:22] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-25 03:17:22] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-25 03:17:53] [ERROR] TestListener - ===== FAILED TEST: testRegisterDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58428}, goog:processID: 35372, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58428/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 86333a444d898c0aea202aac208ce116
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:49)
+	at pages.RegisterPage.getMessage(RegisterPage.java:46)
+	at testcases.register.TC01_RegisterTest.testRegisterDuplicateAccount(TC01_RegisterTest.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-25 03:17:53] [INFO ] TC01_RegisterTest - After Method executed
+[2025-12-25 03:17:54] [INFO ] TC01_RegisterTest - After class executed
+[2025-12-25 03:17:54] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-25 03:17:54] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-25 03:24:14] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-25 03:24:14] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-25 03:24:14] [INFO ] TC01_RegisterTest - Before class executed
+[2025-12-25 03:24:15] [INFO ] TC01_RegisterTest - Before Method executed
+[2025-12-25 03:24:15] [INFO ] TestListener - ===== START TEST: testRegisterDuplicateAccount =====
+[2025-12-25 03:24:15] [INFO ] TC01_RegisterTest - ChromeDriver: chrome on windows (ea91c4c2884eaa0bc464351f4d528fce) - testRegisterDuplicateAccount running...
+[2025-12-25 03:24:15] [INFO ] TC01_RegisterTest - Step 1: Go to https://demo1.cybersoft.edu.vn
+[2025-12-25 03:24:16] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-25 03:24:16] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-25 03:24:16] [INFO ] TC01_RegisterTest - Step 2: Create new account and register successfully (Pre-condition)
+[2025-12-25 03:24:16] [INFO ] TC01_RegisterTest - Testbfaccb61b3864d578909ade05c543cde
+[2025-12-25 03:24:16] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with Testbfaccb61b3864d578909ade05c543cde
+[2025-12-25 03:24:16] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-25 03:24:16] [INFO ] RegisterPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-25 03:24:16] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-25 03:24:16] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with Test123456@
+[2025-12-25 03:24:16] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-25 03:24:16] [INFO ] RegisterPage - sendKeys: By.id: hoTen with John Kenny
+[2025-12-25 03:24:16] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-25 03:24:16] [INFO ] RegisterPage - sendKeys: By.id: email with Testbfaccb61b3864d578909ade05c543cde@example.com
+[2025-12-25 03:24:16] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-25 03:24:16] [INFO ] TC01_RegisterTest - Step 3: Click 'Dang Ky' button
+[2025-12-25 03:24:16] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-25 03:24:16] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-25 03:24:17] [INFO ] TC01_RegisterTest - Step 4: Verify register successfully
+[2025-12-25 03:24:17] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-25 03:24:17] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-25 03:24:47] [ERROR] TestListener - ===== FAILED TEST: testRegisterDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65225}, goog:processID: 30456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65225/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ea91c4c2884eaa0bc464351f4d528fce
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:49)
+	at pages.RegisterPage.getMessage(RegisterPage.java:48)
+	at testcases.register.TC01_RegisterTest.testRegisterDuplicateAccount(TC01_RegisterTest.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-25 03:24:47] [INFO ] TC01_RegisterTest - After Method executed
+[2025-12-25 03:24:47] [INFO ] TC01_RegisterTest - After class executed
+[2025-12-25 03:24:47] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-25 03:24:47] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-25 03:29:57] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-25 03:29:58] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-25 03:29:58] [INFO ] TC01_RegisterTest - Before class executed
+[2025-12-25 03:29:59] [INFO ] TC01_RegisterTest - Before Method executed
+[2025-12-25 03:29:59] [INFO ] TestListener - ===== START TEST: testRegisterDuplicateAccount =====
+[2025-12-25 03:29:59] [INFO ] TC01_RegisterTest - ChromeDriver: chrome on windows (a2437bd6f3626c60fb9d1ba0085dcb9f) - testRegisterDuplicateAccount running...
+[2025-12-25 03:29:59] [INFO ] TC01_RegisterTest - Go to https://demo1.cybersoft.edu.vn
+[2025-12-25 03:30:00] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-25 03:30:00] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-25 03:30:00] [INFO ] TC01_RegisterTest - Create new account and register successfully (Pre-condition)
+[2025-12-25 03:30:00] [INFO ] TC01_RegisterTest - Testfc32e10c1928487788c91587f4c92f7e
+[2025-12-25 03:30:00] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with Testfc32e10c1928487788c91587f4c92f7e
+[2025-12-25 03:30:00] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-25 03:30:00] [INFO ] RegisterPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-25 03:30:00] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-25 03:30:00] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with Test123456@
+[2025-12-25 03:30:00] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-25 03:30:00] [INFO ] RegisterPage - sendKeys: By.id: hoTen with John Kenny
+[2025-12-25 03:30:00] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-25 03:30:00] [INFO ] RegisterPage - sendKeys: By.id: email with Testfc32e10c1928487788c91587f4c92f7e@example.com
+[2025-12-25 03:30:00] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-25 03:30:00] [INFO ] TC01_RegisterTest - Click 'Dang Ky' button
+[2025-12-25 03:30:00] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-25 03:30:00] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-25 03:30:00] [INFO ] TC01_RegisterTest - Verify register successfully
+[2025-12-25 03:30:00] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-25 03:30:00] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-25 03:30:30] [ERROR] TestListener - ===== FAILED TEST: testRegisterDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65354}, goog:processID: 8184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65354/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2437bd6f3626c60fb9d1ba0085dcb9f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:49)
+	at pages.RegisterPage.getMessage(RegisterPage.java:48)
+	at testcases.register.TC01_RegisterTest.testRegisterDuplicateAccount(TC01_RegisterTest.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-25 03:30:30] [INFO ] TC01_RegisterTest - After Method executed
+[2025-12-25 03:30:31] [INFO ] TC01_RegisterTest - After class executed
+[2025-12-25 03:30:31] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-25 03:30:31] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-25 03:41:56] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-25 03:41:56] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-25 03:41:56] [INFO ] TC01_RegisterTest - Before class executed
+[2025-12-25 03:41:57] [INFO ] TC01_RegisterTest - Before Method executed
+[2025-12-25 03:41:57] [INFO ] TestListener - ===== START TEST: testRegisterDuplicateAccount =====
+[2025-12-25 03:41:57] [INFO ] TC01_RegisterTest - ChromeDriver: chrome on windows (a5bf09bfde99321e4015fead80082c80) - testRegisterDuplicateAccount running...
+[2025-12-25 03:41:57] [INFO ] TC01_RegisterTest - Go to https://demo1.cybersoft.edu.vn
+[2025-12-25 03:41:58] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-25 03:41:58] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-25 03:41:58] [INFO ] TC01_RegisterTest - Create new account and register successfully (Pre-condition)
+[2025-12-25 03:41:58] [INFO ] TC01_RegisterTest - Teste6df7505283d4b418d00ad0933ae6721
+[2025-12-25 03:41:58] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with Teste6df7505283d4b418d00ad0933ae6721
+[2025-12-25 03:41:58] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-25 03:41:58] [INFO ] RegisterPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-25 03:41:58] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-25 03:41:58] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with Test123456@
+[2025-12-25 03:41:58] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-25 03:41:58] [INFO ] RegisterPage - sendKeys: By.id: hoTen with John Kenny
+[2025-12-25 03:41:58] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-25 03:41:58] [INFO ] RegisterPage - sendKeys: By.id: email with Teste6df7505283d4b418d00ad0933ae6721@example.com
+[2025-12-25 03:41:58] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-25 03:41:59] [INFO ] TC01_RegisterTest - Click 'Dang Ky' button
+[2025-12-25 03:41:59] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-25 03:41:59] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-25 03:41:59] [INFO ] TC01_RegisterTest - Verify register successfully
+[2025-12-25 03:41:59] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.cssSelector: div.swal2-popup
+[2025-12-25 03:42:29] [ERROR] TestListener - ===== FAILED TEST: testRegisterDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div.swal2-popup (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49888}, goog:processID: 28080, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49888/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a5bf09bfde99321e4015fead80082c80
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at pages.RegisterPage.getPopupMessage(RegisterPage.java:54)
+	at testcases.register.TC01_RegisterTest.testRegisterDuplicateAccount(TC01_RegisterTest.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-25 03:42:29] [INFO ] TC01_RegisterTest - After Method executed
+[2025-12-25 03:42:30] [INFO ] TC01_RegisterTest - After class executed
+[2025-12-25 03:42:30] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-25 03:42:30] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-25 04:11:28] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-25 04:11:28] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-25 04:11:28] [INFO ] TC01_RegisterTest - Before class executed
+[2025-12-25 04:11:29] [INFO ] TC01_RegisterTest - Before Method executed
+[2025-12-25 04:11:29] [INFO ] TestListener - ===== START TEST: testRegisterDuplicateAccount =====
+[2025-12-25 04:11:29] [INFO ] TC01_RegisterTest - ChromeDriver: chrome on windows (f16edf92fd842b79243bcd4711155ec8) - testRegisterDuplicateAccount running...
+[2025-12-25 04:11:29] [INFO ] TC01_RegisterTest - Go to https://demo1.cybersoft.edu.vn
+[2025-12-25 04:11:30] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-25 04:11:30] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-25 04:11:30] [INFO ] TC01_RegisterTest - Create new account and register successfully (Pre-condition)
+[2025-12-25 04:11:30] [INFO ] TC01_RegisterTest - Testfd1e6962d24148a580072ca40a17ffb2
+[2025-12-25 04:11:30] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with Testfd1e6962d24148a580072ca40a17ffb2
+[2025-12-25 04:11:30] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-25 04:11:30] [INFO ] RegisterPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-25 04:11:30] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-25 04:11:31] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with Test123456@
+[2025-12-25 04:11:31] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-25 04:11:31] [INFO ] RegisterPage - sendKeys: By.id: hoTen with John Kenny
+[2025-12-25 04:11:31] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-25 04:11:31] [INFO ] RegisterPage - sendKeys: By.id: email with Testfd1e6962d24148a580072ca40a17ffb2@example.com
+[2025-12-25 04:11:31] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-25 04:11:31] [INFO ] TC01_RegisterTest - Click 'Dang Ky' button
+[2025-12-25 04:11:31] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-25 04:11:31] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-25 04:11:31] [INFO ] TC01_RegisterTest - Verify register successfully
+[2025-12-25 04:11:31] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-25 04:11:31] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-25 04:12:01] [ERROR] TestListener - ===== FAILED TEST: testRegisterDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54700}, goog:processID: 19904, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54700/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f16edf92fd842b79243bcd4711155ec8
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:49)
+	at pages.RegisterPage.getMessage(RegisterPage.java:46)
+	at testcases.register.TC01_RegisterTest.testRegisterDuplicateAccount(TC01_RegisterTest.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-25 04:12:01] [INFO ] TC01_RegisterTest - After Method executed
+[2025-12-25 04:12:02] [INFO ] TC01_RegisterTest - After class executed
+[2025-12-25 04:12:02] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-25 04:12:02] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-25 04:14:16] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-25 04:14:16] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-25 04:14:16] [INFO ] TC01_RegisterTest - Before class executed
+[2025-12-25 04:14:17] [INFO ] TC01_RegisterTest - Before Method executed
+[2025-12-25 04:14:17] [INFO ] TestListener - ===== START TEST: testRegisterDuplicateAccount =====
+[2025-12-25 04:14:17] [INFO ] TC01_RegisterTest - ChromeDriver: chrome on windows (3bf0479e00e9c895ac677e1ceea6099c) - testRegisterDuplicateAccount running...
+[2025-12-25 04:14:17] [INFO ] TC01_RegisterTest - Go to https://demo1.cybersoft.edu.vn
+[2025-12-25 04:14:18] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-25 04:14:18] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-25 04:14:18] [INFO ] TC01_RegisterTest - Create new account and register successfully (Pre-condition)
+[2025-12-25 04:14:18] [INFO ] TC01_RegisterTest - Teste8190424d8d744b0aa78973e7643ea6c
+[2025-12-25 04:14:18] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with Teste8190424d8d744b0aa78973e7643ea6c
+[2025-12-25 04:14:18] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-25 04:14:18] [INFO ] RegisterPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-25 04:14:18] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-25 04:14:18] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with Test123456@
+[2025-12-25 04:14:18] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-25 04:14:18] [INFO ] RegisterPage - sendKeys: By.id: hoTen with John Kenny
+[2025-12-25 04:14:18] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-25 04:14:18] [INFO ] RegisterPage - sendKeys: By.id: email with Teste8190424d8d744b0aa78973e7643ea6c@example.com
+[2025-12-25 04:14:18] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-25 04:14:18] [INFO ] TC01_RegisterTest - Click 'Dang Ky' button
+[2025-12-25 04:14:18] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-25 04:14:18] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-25 04:14:18] [INFO ] TC01_RegisterTest - Verify register successfully
+[2025-12-25 04:14:18] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-25 04:14:18] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-25 04:14:48] [ERROR] TestListener - ===== FAILED TEST: testRegisterDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63537}, goog:processID: 41720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63537/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3bf0479e00e9c895ac677e1ceea6099c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:49)
+	at pages.RegisterPage.getMessage(RegisterPage.java:46)
+	at testcases.register.TC01_RegisterTest.testRegisterDuplicateAccount(TC01_RegisterTest.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-25 04:14:48] [INFO ] TC01_RegisterTest - After Method executed
+[2025-12-25 04:14:49] [INFO ] TC01_RegisterTest - After class executed
+[2025-12-25 04:14:49] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-25 04:14:50] [INFO ] TC01_RegisterTest - Test Suite completed

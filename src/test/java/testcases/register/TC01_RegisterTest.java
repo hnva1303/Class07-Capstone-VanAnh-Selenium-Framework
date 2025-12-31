@@ -174,7 +174,7 @@ public class TC01_RegisterTest extends BaseTest {
         ExtentReportManager.info("VP2: Message should be \"Tài khoản đã tồn tại!\"");
         LOG.info("Verify register FAILED (Duplicate account)");
 
-        String msg2 = registerPage.getMessage();
-        Assert.assertNotEquals(msg2, "Tài khoản đã tồn tại!", "Register should fail when duplicate account");
+        String msg2 = registerPage.getInlineAlertMessage();
+        Assert.assertTrue(msg2.contains("Tài khoản đã tồn tại!"), "Duplicate account message");
     }
 }

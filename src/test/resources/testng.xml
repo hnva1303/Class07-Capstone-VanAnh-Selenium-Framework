@@ -8,6 +8,7 @@
         <classes>
             <class name="testcases.register.TC01_RegisterTest" />
             <class name="testcases.login.TC02_LoginTest" />
+            <class name="testcases.bookmovie.TC04_BookMovieTicketsTest"/>
         </classes>
     </test>
 </suite>

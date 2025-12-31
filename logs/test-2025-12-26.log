@@ -1,0 +1,119 @@
+[2025-12-26 01:48:44] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-26 01:48:45] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-26 01:48:45] [INFO ] TC01_RegisterTest - Before class executed
+[2025-12-26 01:48:47] [INFO ] TC01_RegisterTest - Before Method executed
+[2025-12-26 01:48:47] [INFO ] TestListener - ===== START TEST: testRegisterDuplicateAccount =====
+[2025-12-26 01:48:47] [INFO ] TC01_RegisterTest - ChromeDriver: chrome on windows (e9b5e7b056bb6748818e94624eda3e7c) - testRegisterDuplicateAccount running...
+[2025-12-26 01:48:47] [INFO ] TC01_RegisterTest - Go to https://demo1.cybersoft.edu.vn
+[2025-12-26 01:48:48] [INFO ] TopBarNavigation - click: By.xpath: //a[@href='/sign-up']
+[2025-12-26 01:48:48] [INFO ] TopBarNavigation - waitForElementToBeClickable: By.xpath: //a[@href='/sign-up']
+[2025-12-26 01:48:48] [INFO ] TC01_RegisterTest - Create new account and register successfully (Pre-condition)
+[2025-12-26 01:48:48] [INFO ] TC01_RegisterTest - Testbbb590646e22404b82cdebb39a81179c
+[2025-12-26 01:48:48] [INFO ] RegisterPage - sendKeys: By.name: taiKhoan with Testbbb590646e22404b82cdebb39a81179c
+[2025-12-26 01:48:48] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.name: taiKhoan
+[2025-12-26 01:48:48] [INFO ] RegisterPage - sendKeys: By.id: matKhau with Test123456@
+[2025-12-26 01:48:48] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: matKhau
+[2025-12-26 01:48:48] [INFO ] RegisterPage - sendKeys: By.id: confirmPassWord with Test123456@
+[2025-12-26 01:48:48] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: confirmPassWord
+[2025-12-26 01:48:48] [INFO ] RegisterPage - sendKeys: By.id: hoTen with John Kenny
+[2025-12-26 01:48:48] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: hoTen
+[2025-12-26 01:48:48] [INFO ] RegisterPage - sendKeys: By.id: email with Testbbb590646e22404b82cdebb39a81179c@example.com
+[2025-12-26 01:48:48] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: email
+[2025-12-26 01:48:48] [INFO ] TC01_RegisterTest - Click 'Dang Ky' button
+[2025-12-26 01:48:48] [INFO ] RegisterPage - click: By.xpath: //button[.='Đăng ký']
+[2025-12-26 01:48:48] [INFO ] RegisterPage - waitForElementToBeClickable: By.xpath: //button[.='Đăng ký']
+[2025-12-26 01:48:48] [INFO ] TC01_RegisterTest - Verify register successfully
+[2025-12-26 01:48:48] [INFO ] RegisterPage - getText: By.id: swal2-title
+[2025-12-26 01:48:48] [INFO ] RegisterPage - waitForVisibilityOfElementLocated: By.id: swal2-title
+[2025-12-26 01:49:19] [ERROR] TestListener - ===== FAILED TEST: testRegisterDuplicateAccount =====
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: swal2-title (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50081}, goog:processID: 23728, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50081/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e9b5e7b056bb6748818e94624eda3e7c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at base.BasePage.waitForVisibilityOfElementLocated(BasePage.java:26)
+	at base.BasePage.getText(BasePage.java:49)
+	at pages.RegisterPage.getMessage(RegisterPage.java:47)
+	at testcases.register.TC01_RegisterTest.testRegisterDuplicateAccount(TC01_RegisterTest.java:147)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-26 01:49:19] [INFO ] TC01_RegisterTest - After Method executed
+[2025-12-26 01:49:20] [INFO ] TC01_RegisterTest - After class executed
+[2025-12-26 01:49:20] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-26 01:49:20] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-26 02:12:18] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-26 02:12:18] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-26 02:12:18] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-26 02:12:18] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-26 02:14:40] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-26 02:14:40] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-26 02:14:40] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-26 02:14:40] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-26 02:17:53] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-26 02:17:53] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-26 02:17:53] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-26 02:17:54] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-26 02:20:09] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-26 02:20:09] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-26 02:20:09] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-26 02:20:09] [INFO ] TC01_RegisterTest - Test Suite completed
+[2025-12-26 02:26:07] [INFO ] TC01_RegisterTest - Before Suite executed
+[2025-12-26 02:26:07] [INFO ] TestListener - >>> START TEST SUITE: Register Test
+[2025-12-26 02:26:07] [INFO ] TC04_BookMovieTicketsTest - Before class executed
+[2025-12-26 02:26:09] [INFO ] TC04_BookMovieTicketsTest - Before Method executed
+[2025-12-26 02:26:09] [INFO ] TestListener - ===== START TEST: testClickBuyTicketShouldOpenDetail =====
+[2025-12-26 02:26:09] [WARN ] TestListener - ===== SKIPPED TEST: testClickBuyTicketShouldOpenDetail =====
+[2025-12-26 02:26:09] [INFO ] TC04_BookMovieTicketsTest - After Method executed
+[2025-12-26 02:26:09] [INFO ] TC04_BookMovieTicketsTest - Before Method executed
+[2025-12-26 02:26:09] [INFO ] TestListener - ===== START TEST: testHomeShouldDisplayMovies =====
+[2025-12-26 02:26:10] [ERROR] TestListener - ===== FAILED TEST: testHomeShouldDisplayMovies =====
+java.lang.AssertionError: Trang Home phải hiển thị danh sách phim. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at testcases.bookmovie.TC04_BookMovieTicketsTest.testHomeShouldDisplayMovies(TC04_BookMovieTicketsTest.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[2025-12-26 02:26:10] [INFO ] TC04_BookMovieTicketsTest - After Method executed
+[2025-12-26 02:26:10] [INFO ] TC04_BookMovieTicketsTest - Before Method executed
+[2025-12-26 02:26:10] [INFO ] TestListener - ===== START TEST: testMovieDetailShouldShowShowtime =====
+[2025-12-26 02:26:10] [WARN ] TestListener - ===== SKIPPED TEST: testMovieDetailShouldShowShowtime =====
+[2025-12-26 02:26:10] [INFO ] TC04_BookMovieTicketsTest - After Method executed
+[2025-12-26 02:26:10] [INFO ] TC04_BookMovieTicketsTest - Before Method executed
+[2025-12-26 02:26:10] [INFO ] TestListener - ===== START TEST: testMovieDetailShouldShowTitle =====
+[2025-12-26 02:26:10] [WARN ] TestListener - ===== SKIPPED TEST: testMovieDetailShouldShowTitle =====
+[2025-12-26 02:26:10] [INFO ] TC04_BookMovieTicketsTest - After Method executed
+[2025-12-26 02:26:10] [INFO ] TC04_BookMovieTicketsTest - After class executed
+[2025-12-26 02:26:10] [INFO ] TestListener - >>> FINISH TEST SUITE: Register Test
+[2025-12-26 02:26:10] [INFO ] TC01_RegisterTest - Test Suite completed

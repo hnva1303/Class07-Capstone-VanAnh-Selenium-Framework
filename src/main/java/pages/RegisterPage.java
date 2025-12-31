@@ -12,7 +12,8 @@ public class RegisterPage extends CommonPage {
     private By byTxtEmail = By.id("email");;
     private By byBtnRegister = By.xpath("//button[.='Đăng ký']");;
     private By byLblRegisterMsg = By.id("swal2-title");;
-    private By byMsgDuplicateAccount = By.xpath("//*[@role='alert']//div[contains(@class,'MuiAlert-message')]");
+//    private By byMsgDuplicateAccount = By.xpath("//*[@role='alert']//div[contains(@class,'MuiAlert-message')]");
+    private By byLblMuiAlertMsg = By.xpath("//*[@role='alert']//div[contains(@class,'MuiAlert-message')]");
 
     public RegisterPage(WebDriver driver) {
         super(driver);
@@ -46,5 +47,6 @@ public class RegisterPage extends CommonPage {
         return getText(byLblRegisterMsg);
     }
 
-    public String getDuplicateAccountInlineMessage() { return getText(byMsgDuplicateAccount); }
+//    public String getDuplicateAccountInlineMessage() { return getText(byMsgDuplicateAccount); }
+    public String getInlineAlertMessage() {return getText(byLblMuiAlertMsg);}
 }
