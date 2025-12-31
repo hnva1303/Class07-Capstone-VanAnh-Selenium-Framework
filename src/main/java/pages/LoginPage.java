@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends CommonPage {
 
+    private static final String BASE_URL = "https://demo1.cybersoft.edu.vn";
+
     private By byTxtAccountLogin = By.id("taiKhoan");;
     private By byTxtPasswordLogin = By.id("matKhau");;
     private By byBtnLogin = By.xpath("//button[.='Đăng nhập']");;
@@ -16,6 +18,10 @@ public class LoginPage extends CommonPage {
 
     public LoginPage(WebDriver driver) {
         super(driver);
+    }
+
+    public void navigateToLoginPage() {
+        driver.get(BASE_URL + "/login");
     }
 
     public void enterAccount(String account) {

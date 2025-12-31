@@ -24,16 +24,16 @@ public class BaseTest {
     }
 
     //khoi tao driver
-    @BeforeMethod
-    public void beforeMethod() {
+    @BeforeClass
+    public void beforeClass() {
         LOG.info("Before class executed");
         DriverManager driverManager = DriverManagerFactory.getDriverManager("chrome");
         driver = driverManager.createDriver();
         driver.manage().window().maximize();
     }
 
-    @BeforeClass
-    public void beforeClass(Method method) {
+    @BeforeMethod
+    public void beforeMethod(Method method) {
         LOG.info("Before Method executed");
         ExtentReportManager.createTest(method.getName());
     }

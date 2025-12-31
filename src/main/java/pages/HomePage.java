@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage extends CommonPage {
 
-    private By byLblUserProfile = By.xpath("//a[@href='/account']/h3");;
+    private static final String BASE_URL = "https://demo1.cybersoft.edu.vn";
+
+    private By byLblUserProfile = By.xpath("//a[@href='/account']/h3");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -14,4 +16,8 @@ public class HomePage extends CommonPage {
     public String getUserProfileName() {
         return getText(byLblUserProfile);
     }
-}
+
+    public void navigateToHomePage() {
+        driver.get(BASE_URL);
+        }
+    }
