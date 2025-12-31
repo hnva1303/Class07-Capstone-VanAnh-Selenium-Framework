@@ -44,7 +44,7 @@ public class TC04_BookMovieTicketsTest extends BaseTest {
         driver.get(BASE_URL + "/");
 
         List<WebElement> buyButtons =
-                driver.findElements(By.xpath("//a[contains(text(),'MUA VÉ NGAY')]"));
+                driver.findElements(By.xpath("//button[contains(.,'MUA VÉ NGAY')]"));
 
         if (buyButtons.isEmpty())
             throw new SkipException("Không tìm thấy nút MUA VÉ NGAY.");
