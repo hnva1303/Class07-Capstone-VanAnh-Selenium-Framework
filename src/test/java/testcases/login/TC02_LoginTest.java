@@ -58,7 +58,7 @@ public class TC02_LoginTest extends BaseTest {
         driver.get("https://demo1.cybersoft.edu.vn");
 
         //Step 2: Click 'Đăng Nhập' link
-        homePage.navigateLoginPage();
+        loginPage.navigateToLoginPage();
 
         //Step 3: Enter account
         String newAcount = "Testaefad88de3ff4ca2b9d3679f1199415c";
